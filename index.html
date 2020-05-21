@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best calculator</title>
+    
+    <!-- Metatags -->
+    <meta name="og:title" content="Best calculator">
+    <meta name="og:description" content="Best calculator is not a real calculator. But is the best one! Have you ever had this much fun with a calculator? Of course not, they're boring.. and for maths."/>
+    <meta name="og:image" content="/backgrounds/calculator.png"/>
+    <meta name="author" content="Michael Cuello"/>
+    <meta name="robots" content="index, follow"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta name="keywords" content="Calculator, meme, funny, maths, funny calculator, calculator memes, calculator funny numbers, best calculator, memes"/>
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:creator" content="@MCuello17">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon/ico">
+</head>
+<body>
+    <section id="calculator-wrapper">
+        <article id="calculator">
+            <div class="screen">
+                <h5 class="operation">
+                    {{ rawOperation }}
+                </h5>
+                <h5 v-if="result" class="equals">=</h5>
+                <h1 class="result">
+                    {{ result }}
+                </h1>
+            </div>
+            <div class="calculator-body">
+                <div class="header-operators">
+                    <button v-on:click="clearOperation">C</button>
+                    <button v-on:click="substractNum"><</button>
+                </div>
+                <div class="numbers">
+                    <button v-on:click="addNum(7)">7</button>
+                    <button v-on:click="addNum(8)">8</button>
+                    <button v-on:click="addNum(9)">9</button>
+                    <button v-on:click="addNum(4)">4</button>
+                    <button v-on:click="addNum(5)">5</button>
+                    <button v-on:click="addNum(6)">6</button>
+                    <button v-on:click="addNum(1)">1</button>
+                    <button v-on:click="addNum(2)">2</button>
+                    <button v-on:click="addNum(3)">3</button>
+                    <button v-on:click="addNum(0)">0</button>
+                </div>
+                <div class="side-operators">
+                    <button v-on:click="addOperator('/')">/</button>
+                    <button v-on:click="addOperator('*')">*</button>
+                    <button v-on:click="addOperator('-')">-</button>
+                    <button v-on:click="addOperator('+')">+</button>
+                    <button v-on:click="getResult">=</button>
+                </div>
+            </div>
+        </article>
+        <article id="footer">
+            <div class="about">
+                <p>Best calculator is a product by <a href="https://github.com/mcuello17" target="_blank">Michael Cuello</a>.</p>
+                <p>It was made primarily to learn Vuejs (and also to have fun).</p>
+                <p>If you enjoy playing with the calculator I would really apreciate it if you gave the repository a star on <a href="https://github.com/mcuello17" target="_blank">GitHub</a></p>
+                <p>Feel free to leave any comment, critics, and meme ideas as well.</p>
+            </div>
+        </article>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
